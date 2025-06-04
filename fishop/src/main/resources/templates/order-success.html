@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Заказ оформлен</title>
+</head>
+<body>
+
+<header th:insert="blocs/header.html :: header"></header>
+<div class="container mt-4">
+    <div class="alert alert-success">
+        <h1>Ваш заказ успешно оформлен!</h1>
+    </div>
+</div>
+
+<a th:href="@{/products}">Вернуться к покупкам</a>
+</body>
+</html>

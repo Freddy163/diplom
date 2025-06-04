@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Оформление заказа</title>
+</head>
+<body>
+<h1>Оформление заказа</h1>
+
+Поздравляем, ваш заказ оформлен
+<!--<div th:if="${cart != null and !cart.items.isEmpty()}">-->
+<!--    <h2>Ваш заказ</h2>-->
+<!--    <table>-->
+<!--        <tr th:each="item : ${cart.items}">-->
+<!--            <td th:text="${item.key}">ID товара</td>-->
+<!--            <td th:text="${item.value}">Количество</td>-->
+<!--        </tr>-->
+<!--    </table>-->
+<!--    <p>Итого: <span th:text="${total}"></span> руб.</p>-->
+
+<!--    <form th:action="@{/cart/placeOrder}" method="post">-->
+<!--        <button type="submit">Подтвердить заказ</button>-->
+<!--    </form>-->
+<!--</div>-->
+
+<a th:href="@{/cart}">Вернуться в корзину</a>
+</body>
+</html>
