@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Магазин рыбалки</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/css/style.css" rel="stylesheet">
+</head>
+<body>
+<header th:insert="blocs/header.html :: header"></header>
+<section class="about-content">
+    <div class="about-grid">
+        <div class="about-photo">
+            <img src="/images/foto1.jpg" alt="Фото проекта">
+        </div>
+
+        <div class="about-text">
+            <span class="diplom-badge">Дипломный проект</span>
+            <h2>Магазин рыболовных товаров "Рыболов"</h2>
+
+            <p>Данный проект был разработан в качестве дипломной работы. Основной целью было создание полнофункционального интернет-магазина с современным дизайном и удобным интерфейсом.</p>
+
+            <p>В проекте реализованы:</p>
+            <ul>
+                <li>Каталог товаров</li>
+                <li>Корзина покупок</li>
+                <li>Система авторизации пользователей</li>
+                <li>Личный кабинет</li>
+                <li>Адаптивный дизайн для всех устройств</li>
+            </ul>
+
+            <p>Технологии, использованные в проекте:</p>
+            <ul>
+                <li>Frontend: HTML5, CSS3, Thymeleaf</li>
+                <li>Backend: Java, Spring Boot</li>
+                <li>База данных: MySQL</li>
+                <li>Система сборки: Maven</li>
+            </ul>
+
+            <p>Проект разрабатывался с учетом современных тенденций веб-разработки и требований к пользовательскому опыту. Особое внимание уделялось производительности и безопасности приложения.</p>
+        </div>
+    </div>
+</section>
+</body>
+</html>

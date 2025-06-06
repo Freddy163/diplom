@@ -1,8 +1,10 @@
 package com.example.fishop.controller;//package com.example.fishop.controller;
 
 import com.example.fishop.model.Product;
+import com.example.fishop.model.ShoppingCart;
 import com.example.fishop.repository.ProductRepository;
 import com.example.fishop.service.ResourceNotFoundException;
+import jakarta.servlet.http.HttpSession;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -31,7 +33,27 @@ public class ProductController {
         model.addAttribute("product", product); // передаем один продукт
         return "product";
     }
+    @PostMapping("/products/add")
+    public String addToCart(@RequestParam("id") Long productId,
+                            @RequestParam(value = "quantity", defaultValue = "1") int quantity,
+                            HttpSession session) {
+        Product product = productRepository.findById(productId)
+                .orElseThrow(() -> new IllegalArgumentException("Invalid product id"));
 
+        ShoppingCart cart = getOrCreateCart(session);
+        cart.addItem(product, quantity);
+        session.setAttribute("cart", cart); // Явное сохранение изменений
+
+        return "redirect:/products";
+    }
+    private ShoppingCart getOrCreateCart(HttpSession session) {
+        ShoppingCart cart = (ShoppingCart) session.getAttribute("cart");
+        if (cart == null) {
+            cart = new ShoppingCart();
+            session.setAttribute("cart", cart);
+        }
+        return cart;
+    }
     @GetMapping("/create")
     public String showCreateForm(Model model) {
         model.addAttribute("product", new Product());

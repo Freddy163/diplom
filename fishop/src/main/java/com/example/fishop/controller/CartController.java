@@ -79,17 +79,6 @@ public class CartController {
         return cart;
     }
 
-    @GetMapping("/checkout")
-    public String checkout(Principal principal, Model model, HttpSession session) {
-        ShoppingCart cart = getOrCreateCart(session);
-        if (cart.getItems().isEmpty()) {
-            return "redirect:/cart";
-        }
-
-        model.addAttribute("cart", cart);
-        model.addAttribute("total", calculateTotal(cart));
-        return "checkout";
-    }
 
     @PostMapping("/placeOrder")
     public String placeOrder(Principal principal, HttpSession session) {

@@ -1,0 +1,96 @@
+/* Контейнер страницы товара */
+.product-detail {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background-color: var(--white);
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    border: 1px solid var(--light-teal);
+}
+
+/* Изображение товара */
+.product-detail-image {
+    width: 100%;
+    max-height: 400px;
+    object-fit: contain;
+    margin: 1rem 0;
+    border-radius: 4px;
+    border: 1px solid var(--light-teal);
+}
+
+/* Цена товара */
+.product-price {
+    font-size: 1.5rem;
+    color: var(--primary-blue);
+    font-weight: 600;
+    margin: 1.5rem 0;
+}
+
+/* Описание товара */
+.product-detail p {
+    line-height: 1.6;
+    color: var(--secondary-blue);
+    margin-bottom: 1.5rem;
+}
+
+/* Форма добавления в корзину */
+.product-detail form {
+    margin: 2rem 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    align-items: center;
+}
+
+.product-detail input[type="number"] {
+    width: 70px;
+    padding: 0.5rem;
+    border: 1px solid var(--light-teal);
+    border-radius: 4px;
+    text-align: center;
+}
+
+.product-detail .btn-primary {
+    background-color: var(--primary-blue);
+    border-color: var(--primary-blue);
+    padding: 0.5rem 1.5rem;
+}
+
+.product-detail .btn-primary:hover {
+    background-color: var(--secondary-blue);
+    border-color: var(--secondary-blue);
+}
+
+/* Кнопки навигации */
+.product-detail .btn-link {
+    color: var(--primary-blue);
+    margin-right: 1rem;
+    text-decoration: none;
+}
+
+.product-detail .btn-link:hover {
+    color: var(--secondary-blue);
+    text-decoration: underline;
+}
+
+/* Заголовок */
+.product-detail h2 {
+    color: var(--secondary-blue);
+    font-size: 1.8rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--light-teal);
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+    .product-detail {
+        padding: 1.5rem;
+        margin: 1rem;
+    }
+
+    .product-detail form {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}

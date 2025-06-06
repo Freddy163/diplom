@@ -24,7 +24,7 @@ public class SecurityConfig {
         http
                 .authorizeHttpRequests(auth -> auth
                         .requestMatchers("/profile/**", "/create","/cart/checkout", "/cart/placeOrder", "/orders/**").authenticated()
-                        .requestMatchers("/", "/main", "/registration", "/login", "/static/**", "/products/**").permitAll()
+                        .requestMatchers("/", "/main", "/registration", "/login", "/static/**", "/products/**", "/about").permitAll()
                         .requestMatchers("/images/**", "/css/**", "/js/**").permitAll()
                         .anyRequest().authenticated()
                 )

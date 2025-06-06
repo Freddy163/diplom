@@ -3,10 +3,81 @@
 <head>
     <title>Магазин рыбалки</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/css/style.css" rel="stylesheet">
 </head>
 <body>
 
 <header th:insert="blocs/header.html :: header"></header>
-Главная страница
+<section class="catch-of-the-month">
+    <div class="catch-container">
+        <div class="catch-image-wrapper">
+            <div class="catch-image" style="background-image: url('/images/ulov.jpg');">
+                <span class="catch-badge">Улов месяца</span>
+            </div>
+        </div>
+
+        <div class="catch-story">
+            <div class="catch-text">
+            <h2 class="catch-title">Окуни 700 грамм</h2>
+
+                <p>"Этот гиганты клюнули на закате после 3 часов ожидания. Борьба длилась около 40 минут - первый окунь оказался невероятно сильным!"</p>
+                <p>Иван использовал удилище Heavy класса с мультипликаторной катушкой и флюорокарбоновой леской 0.35 мм.</p>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="catch-gallery">
+    <h2 class="main-text">Наши трофеи</h2>
+    <div class="gallery-grid">
+        <div class="catch-card">
+            <img src="/images/karasi.jpg" alt="Караси 5.5 кг">
+            <div class="catch-info">
+                <span class="fish-type">Караси</span>
+                <span class="fish-weight">5.5 кг</span>
+                <span class="fish-location">Река Кинель</span>
+            </div>
+        </div>
+        <div class="catch-card">
+            <img src="/images/lesch.jpg" alt="Лещ и плотва 2 кг">
+            <div class="catch-info">
+                <span class="fish-type">Лещ и плотва</span>
+                <span class="fish-weight">2 кг</span>
+                <span class="fish-location">Кутулук</span>
+            </div>
+        </div>
+        <div class="catch-card">
+            <img src="/images/schuka.jpg" alt="Щуки 3 кг">
+            <div class="catch-info">
+                <span class="fish-type">Щуки</span>
+                <span class="fish-weight">3 кг</span>
+                <span class="fish-location">Река Кинель</span>
+            </div>
+        </div>
+        <div class="catch-card">
+            <img src="/images/okun.jpg" alt="Окунь 0.1 кг">
+            <div class="catch-info">
+                <span class="fish-type">Окунь</span>
+                <span class="fish-weight">0.1 кг</span>
+                <span class="fish-location">Река Сок</span>
+            </div>
+        </div>
+        <div class="catch-card">
+            <img src="/images/ryba.jpg" alt="Щука и окуни 6 кг">
+            <div class="catch-info">
+                <span class="fish-type">Щука и окуни</span>
+                <span class="fish-weight">6 кг</span>
+                <span class="fish-location">Река Сок</span>
+            </div>
+        </div>
+        <div class="catch-card">
+            <img src="/images/big-boss.jpg" alt="Синтявка 0.005 кг">
+            <div class="catch-info">
+                <span class="fish-type">Синтявка</span>
+                <span class="fish-weight">0.005 кг</span>
+                <span class="fish-location">Озеро Широкое</span>
+            </div>
+        </div>
+    </div>
+</section>
 </body>
 </html>
