@@ -10,11 +10,9 @@
 <header th:insert="blocs/header.html :: header"></header>
 <<div class="container cart-container">
     <h1 class="cart-title">Ваша корзина</h1>
-<!-- Правильное условие проверки пустой корзины -->
     <div th:if="${cart == null or cart.items.empty}" class="empty-cart">
         <p>Ваша корзина пуста</p>
     </div>
-<!-- Содержимое корзины -->
     <div th:unless="${cart == null or cart.items.empty}">
         <div class="table-responsive">
             <table class="table cart-table">

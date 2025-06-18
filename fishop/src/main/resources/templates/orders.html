@@ -13,18 +13,12 @@
 <header th:insert="blocs/header.html :: header"></header>
 <div class="container mt-4">
     <h1 class="mb-4">Мои заказы</h1>
-
-    <!-- Сообщение об ошибке -->
     <div th:if="${param.error != null}" class="alert alert-danger">
         <span th:if="${param.error == 'access_denied'}">Нет доступа к этому заказу</span>
     </div>
-
-    <!-- Если заказов нет -->
     <div th:if="${orders == null || orders.isEmpty()}" class="alert alert-info">
         У вас пока нет заказов. <a href="/products">Перейти в магазин</a>
     </div>
-
-    <!-- Список заказов -->
     <div th:each="order : ${orders}" class="order-card">
         <div class="d-flex justify-content-between align-items-center mb-2">
             <h4>Заказ #<span th:text="${order.id}"></span></h4>

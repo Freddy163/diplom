@@ -31,26 +31,6 @@ public class Product implements Serializable {
         this.imageUrl = imageUrl;
     }
 
-    @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER, mappedBy = "product")
-    private List<Image> images = new ArrayList<>();
-    private long previewImageId;
-
-    public List<Image> getImages() {
-        return images;
-    }
-
-    public void setImages(List<Image> images) {
-        this.images = images;
-    }
-
-    public long getPreviewImageId() {
-        return previewImageId;
-    }
-
-    public void setPreviewImageId(long previewImageId) {
-        this.previewImageId = previewImageId;
-    }
-
     public Long getId() {
         return id;
     }
@@ -91,9 +71,5 @@ public class Product implements Serializable {
         this.category = category;
     }
 
-    public void addImage(Image image) {
-        image.setProduct(this);
-        images.add(image);
-    }
 }
 
